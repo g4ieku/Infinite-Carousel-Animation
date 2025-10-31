@@ -96,4 +96,26 @@
 .carousel_content {
   width: 100%;
   display: flex;
+  animation: scroll 30s linear infinite;
+}
+
+.carousel_reverse_scroll {
+  flex-direction: row-reverse;
+  animation-direction: reverse;
+  animation-delay: 1.2s;
+}
+
+.carousel_content:hover {
+  animation-play-state: paused;
+}
+
+/* Scroll Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
